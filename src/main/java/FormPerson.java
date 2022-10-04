@@ -1,5 +1,6 @@
 import javax.swing.*;
-import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class FormPerson extends JFrame{
     private JPanel mainPanel;
@@ -11,6 +12,18 @@ public class FormPerson extends JFrame{
     private JTable tbHist;
     private JButton btnDel;
     private JTextField txtAddress;
+    private JTextField txtNationality;
+
+    public FormPerson() {
+        PersonsDAO personsDAO = new PersonsDAO();
+        btnOK.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Person person = new Person(txtName.getText(), txtCpf.getText(), txtRg.getText(), txtDate.getText(), txtAddress.getText(), txtNationality.getText());
+                personsDAO.addPerson(person);
+            }
+        });
+    }
 
     public static void main(String[] args) {
         JFrame frame = new JFrame("FormPerson");

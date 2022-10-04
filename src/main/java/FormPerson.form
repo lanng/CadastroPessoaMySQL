@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="FormPerson">
-  <grid id="27dc6" binding="mainPanel" layout-manager="GridLayoutManager" row-count="20" column-count="5" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+  <grid id="27dc6" binding="mainPanel" layout-manager="GridLayoutManager" row-count="22" column-count="5" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
     <margin top="0" left="0" bottom="0" right="0"/>
     <constraints>
-      <xy x="20" y="20" width="763" height="563"/>
+      <xy x="20" y="20" width="763" height="629"/>
     </constraints>
     <properties/>
     <border type="none"/>
@@ -89,7 +89,7 @@
       </component>
       <scrollpane id="f925a">
         <constraints>
-          <grid row="0" column="3" row-span="18" col-span="1" vsize-policy="0" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <grid row="0" column="3" row-span="20" col-span="1" vsize-policy="0" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties/>
         <border type="none" title="Histórico"/>
@@ -102,7 +102,7 @@
       </scrollpane>
       <component id="76e87" class="javax.swing.JButton" binding="btnDel">
         <constraints>
-          <grid row="18" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <grid row="20" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <text value="Deletar"/>
@@ -110,7 +110,7 @@
       </component>
       <component id="407f7" class="javax.swing.JButton" binding="btnOK">
         <constraints>
-          <grid row="17" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <grid row="19" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <text value="Cadastrar"/>
@@ -128,7 +128,7 @@
       </hspacer>
       <vspacer id="f9100">
         <constraints>
-          <grid row="19" column="1" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+          <grid row="21" column="1" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
         </constraints>
       </vspacer>
       <component id="7f088" class="javax.swing.JTextField" binding="txtAddress">
@@ -141,9 +141,26 @@
       </component>
       <vspacer id="aca8b">
         <constraints>
-          <grid row="10" column="0" row-span="7" col-span="3" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+          <grid row="12" column="0" row-span="7" col-span="3" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
         </constraints>
       </vspacer>
+      <component id="bf505" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="10" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <labelFor value="d0335"/>
+          <text value="Nacionalidade:"/>
+        </properties>
+      </component>
+      <component id="d0335" class="javax.swing.JTextField" binding="txtNationality">
+        <constraints>
+          <grid row="11" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+        </constraints>
+        <properties/>
+      </component>
     </children>
   </grid>
 </form>
