@@ -22,7 +22,7 @@ deve proporcionar a visualização de todos os registros gravados no BD.*
 * Nacionalidade
 
 ***
-- [ ] Implementar a interface gráfica para inserção de dados.
+- [x] Implementar a interface gráfica para inserção de dados.
 - [ ] Implementar a classe Pessoa com seus atributos e metodos.
 - [ ] Implementar a classe do banco de dados para realizar a conexão com o server (ConnectionFactory).
 - [ ] Implementar a classe para realizar o CRUD (PersonDAO).
