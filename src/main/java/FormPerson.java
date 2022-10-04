@@ -15,11 +15,12 @@ public class FormPerson extends JFrame{
     private JTextField txtNationality;
 
     public FormPerson() {
+        PersonsDAO personsDAO = new PersonsDAO();
         btnOK.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 Person person = new Person(txtName.getText(), txtCpf.getText(), txtRg.getText(), txtDate.getText(), txtAddress.getText(), txtNationality.getText());
-                System.out.println(person.getCpf());
+                personsDAO.addPerson(person);
             }
         });
     }
