@@ -51,4 +51,34 @@ public class Person {
     public String getNationality() {
         return Nationality;
     }
+
+    public void setName(String name) {
+        Name = name;
+    }
+
+    public void setCpf(String cpf) {
+        Cpf = cpf;
+    }
+
+    public void setRg(String rg) {
+        Rg = rg;
+    }
+
+    public void setDateOfBirth(String dateOfBirth) {
+        DateOfBirth = dateOfBirth;
+    }
+
+    public void setAddress(String address) {
+        Address = address;
+    }
+
+    public void setNationality(String nationality) {
+        Nationality = nationality;
+    }
+
+    public String getData(){
+        String str = "";
+        str += "| " + id + "|" + Name + "|" + Cpf + "|" + Rg + "|" + DateOfBirth + "|" + Address + "|" + Nationality;
+        return  str;
+    }
 }
