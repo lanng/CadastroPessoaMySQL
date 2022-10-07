@@ -3,7 +3,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class ConnectionFactory {
-    private final String url = "jdbc:mysql://localhost:33061/person";
+    private final String url = "jdbc:mysql://localhost:33061/person"; // String de conexão
     private final String user = "root";
     private final String password = "root";
 

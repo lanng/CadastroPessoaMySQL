@@ -25,6 +25,30 @@ deve proporcionar a visualização de todos os registros gravados no BD.*
 - [x] Implementar a interface gráfica para inserção de dados.
 - [x] Implementar a classe Pessoa com seus atributos e metodos.
 - [x] Implementar a classe do banco de dados para realizar a conexão com o server (ConnectionFactory).
-- [ ] Implementar a classe para realizar o CRUD (PersonDAO).
-- [ ] Implementar os metodos para inserir os registros no banco de dados.
+- [x] Implementar a classe para realizar o CRUD (PersonDAO).
+- [x] Implementar os metodos para inserir os registros no banco de dados.
 ***
+### Possiveis melhorias
+
+- Validação de campos unicos (RG e CPF) para não inserir repetidos.
+- Validação de seleção de múltiplas linhas na hora de atualizar/deletar os registros
+- Melhorias estéticas em geral
+***
+### Como rodar o projeto
+
+1. Requisitos:
+   - MySQL
+   - JDK 19
+   - Editar a string de conexão em ConnectionFactory.java conforme os seus dados
+
+
+2. Rodando o projeto
+   - Clone o repositório:
+    ```
+    git clone https://github.com/lanng/CadastroPessoaMySQL.git
+    ```
+   - Acessar o diretório:
+    ```
+    cd CadastroPessoaMySQL
+    ```
+   - Abrir com sua IDE preferida e rodar pela classe FormPerson no método Main.
