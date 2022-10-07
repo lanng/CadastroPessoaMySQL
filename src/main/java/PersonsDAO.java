@@ -60,4 +60,22 @@ public class PersonsDAO {
             throw new RuntimeException(e);
         }
     }
+
+    public void updatePerson(Person person){
+        String sql = "update persons set name = ?, cpf = ?, rg = ?, date = ?, address = ?, nationality = ? where id = ?";
+        try {
+            PreparedStatement statement = conn.prepareStatement(sql);
+            statement.setString(1, person.getName());
+            statement.setString(2, person.getCpf());
+            statement.setString(3, person.getRg());
+            statement.setString(4, person.getDateOfBirth());
+            statement.setString(5, person.getAddress());
+            statement.setString(6, person.getNationality());
+            statement.setInt(7, person.getId());
+            statement.execute();
+            statement.close();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
 }

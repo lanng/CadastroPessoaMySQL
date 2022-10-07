@@ -2,6 +2,8 @@ import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 import java.util.ArrayList;
 
 public class FormPerson extends JFrame{
@@ -52,16 +54,38 @@ public class FormPerson extends JFrame{
                 int index = tbHist.getSelectedRow();
                 if (index >= 0) {
                     int id = (int) tbHist.getModel().getValueAt(index, 0);
+                    Person person = new Person(txtName.getText(), txtCpf.getText(), txtRg.getText(), txtDate.getText(), txtAddress.getText(), txtNationality.getText());
+                    person.setId(id);
                     int op = JOptionPane.showConfirmDialog(mainPanel, "Deseja realmente atualizar esse registro?", "Confirmação", JOptionPane.YES_NO_OPTION);
                     if (op == 0) {
-//                        personsDAO.up(id); ->update
-                        //Create a JFrame/JPanel to access the attributes and edit the infos
+                        personsDAO.updatePerson(person);
                         Historic();
                     }
                 }
                 else {
                     JOptionPane.showMessageDialog(mainPanel, "Selecione uma linha", "Erro", JOptionPane.ERROR_MESSAGE);
                 }
+            }
+        });
+        tbHist.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                super.mouseClicked(e);
+                DefaultTableModel tbModel = (DefaultTableModel) tbHist.getModel();
+
+                String tblName = tbModel.getValueAt(tbHist.getSelectedRow(), 1).toString();
+                String tblCpf = tbModel.getValueAt(tbHist.getSelectedRow(), 2).toString();
+                String tblRg = tbModel.getValueAt(tbHist.getSelectedRow(), 3).toString();
+                String tblDate = tbModel.getValueAt(tbHist.getSelectedRow(), 4).toString();
+                String tblAddress = tbModel.getValueAt(tbHist.getSelectedRow(), 5).toString();
+                String tblNationality = tbModel.getValueAt(tbHist.getSelectedRow(), 6).toString();
+
+                txtName.setText(tblName);
+                txtCpf.setText(tblCpf);
+                txtRg.setText(tblRg);
+                txtDate.setText(tblDate);
+                txtAddress.setText(tblAddress);
+                txtNationality.setText(tblNationality);
             }
         });
     }
